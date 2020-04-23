@@ -3,6 +3,11 @@ body{
 	font-family: '微軟正黑體', 'PingFang', 'sans-serif';
 	color: rgba(13,13,13,0.9);
 	min-height: 100vh;
+	font-size: 18px;
+}
+p,li{
+	line-height: 1.5;
+	letter-spacing: 1.2px;
 }
 a{
 	color: rgba(13,13,13,0.9);
@@ -56,6 +61,9 @@ main{
 	max-width: 1200px;
 	margin: 0 auto;
 	padding-top: 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .content h2{
 	font-size: 36px;
@@ -68,9 +76,39 @@ main{
 	font-family: 'Times New Roman', Times, serif;
 }
 
+#intro{
+	width: 30%;
+}
+
+.skill{
+	width: 65%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.skill h2{
+	width: 100%;
+}
+.skill > ol{
+	width: 30%;
+	margin-bottom: 40px;
+}
+.skill h3{
+	font-size: 28px;
+	border-bottom: 1.5px solid rgba(13,13,13,.9);
+	padding:0 0 5px 10px;
+	margin-bottom: 10px;
+}
+.skill li{
+	padding-left: 10px;
+}
+
 @media only screen and (max-width: 770px) {
 	header ul li{
 		width: 80px;
+	}
+	.skill > ol{
+		width: 45%;
 	}
 }
 .shadow{
@@ -78,26 +116,58 @@ main{
 }
 
 .avatar{
-	width: 100px;
+	width: 100%;
 	margin:0 auto 0 auto;
 	top:-240px
 }
 .avatar > div{
+	width: 100px;
 	background-color: rgba(255,255,255,0.85);
 	border: 1.5px solid #FFF;
 	border-radius: 50%;
-	margin-bottom: 10px;
+	margin:0 auto 10px auto;
 }
 .avatar p{
 	text-align: center;
 	font-weight: 900;
 }
-
+#exp{
+	width: 100%;
+	margin-top: 100px;
+	overflow: hidden;
+}
+#exp ol{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+#exp ol .line{
+	position: absolute;
+	top: 0;
+	left: 209px;
+	width: 4px;
+	height: 2000px;
+	background-color: #666;
+}
 #exp ol li{
-	margin: 0 0 10px 0;
+	margin: 0 0 40px 0;
+	display: flex;
 }
 #exp ol li span{
+	width: 230px;
 	display: block;
+}
+#exp ol li span::after{
+	content: '●';
+	position: relative;
+	left: 5px;
+}
+#exp ol li div{
+	width: calc(100% - 230px);
+}
+
+#work{
+	margin-top: 100px;
 }
 
 footer{
