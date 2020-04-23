@@ -1,11 +1,11 @@
 @import url("reset.css");
 body{
 	font-family: '微軟正黑體', 'PingFang', 'sans-serif';
-	color: rgba(255,255,255,0.9);
+	color: rgba(13,13,13,0.9);
 	min-height: 100vh;
 }
 a{
-	color: rgba(255,255,255,0.9);
+	color: rgba(13,13,13,0.9);
 	transition: opacity .2s ease-in-out;
 }
 
@@ -34,9 +34,30 @@ header ul li{
 	text-align: center;
 }
 header ul li a{
+	color: rgba(255,255,255,0.9);
 	font-size: 18px;
 	font-weight: 500;
 }
+
+main{
+	position: relative;
+	background: rgba(204,204,204,.85);
+}
+.dome{
+	border-radius: 50% 50% 0 0;
+	background: rgba(204,204,204,.85);
+	width: 100%;
+	height: 200px;
+	margin-top: 150px;
+}
+.content{
+	width: 90%;
+	top: -240px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
 @media only screen and (max-width: 770px) {
 	header ul li{
 		width: 80px;
@@ -48,7 +69,8 @@ header ul li a{
 
 .avatar{
 	width: 100px;
-	margin:0 auto;
+	margin:0 auto 0 auto;
+	top:-240px
 }
 .avatar > div{
 	background-color: rgba(255,255,255,0.85);
