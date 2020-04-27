@@ -25,7 +25,131 @@ a{
 	filter: blur(2px);
 }
 
+/***開廠動畫***/
+.load{
+	overflow: hidden;
+	animation-name:load;
+	animation-duration:0s;
+	animation-delay:8s;
+	animation-fill-mode:forwards;
+}
+@keyframes load{
+    from{
+      overflow: hidden;
+    }
+    to{
+      overflow: auto;
+    }
+}
 
+#loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	background-color: rgb(254,254,254);
+	animation-name:bgRemove;
+	animation-duration:0s;
+	animation-delay:6s;
+	animation-fill-mode:forwards;
+}
+@keyframes bgRemove{
+    from{
+      background-color: rgb(254,254,254);
+    }
+    to{
+      background-color: transparent;
+    }
+}
+#loading .positionZero{
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+	width: 96px;
+	height: 96px;
+	border: 2px solid #ccc;
+	background: #FFF;
+	border-radius: 50%;
+	animation-name:spin;
+	animation-duration:2s;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count:infinite;
+}
+@keyframes spin{
+    from{
+      transform:rotate(0);
+    }
+    to{
+      transform:rotate(360deg);
+    }
+}
+#loading .line{
+	position: absolute;
+	left: 50%;
+	width: 0;
+	height: calc(50% - 1px);;
+	background-color: rgb(254,254,254);
+}
+
+.line.top{
+	top:0;
+	border-bottom: 1px solid #ccc;
+}
+.line.bottom{
+	bottom: 0;
+	border-top: 1px solid #ccc;
+}
+.leaveT{
+	animation-name:leaveT;
+	animation-duration:4s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+}
+.leaveB{
+	animation-name:leaveB;
+	animation-duration:4s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+}
+@keyframes leaveT{
+		0%{
+			left:50%;
+			width: 0;
+    }
+    50%{
+			left:0%;
+			width: 100%;
+			top:0;
+			opacity: 1;
+    }
+    100%{
+			top:-50%;
+			opacity: .5;
+			left:0%;
+			width: 100%;
+    }
+}
+@keyframes leaveB{
+		0%{
+			left:50%;
+			width: 0;
+    }
+    50%{
+			left:0%;
+			width: 100%;
+			bottom:0;
+			opacity: 1;
+    }
+    100%{
+			bottom:-50%;
+			opacity: .5;
+			left:0%;
+			width: 100%;
+    }
+}
+/******/
 header{
 	padding: 20px 0;
 }
