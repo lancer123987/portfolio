@@ -3,6 +3,7 @@ var loading = function () {
 	$('.line.bottom').addClass('leaveB');
 	$('.positionZero').css('animation-name', 'none');
 	$('.positionZero').delay(3500).fadeOut(500);
+	$('#loading').delay(4000).hide(0);
 };
 
 $(document).ready(function () {
