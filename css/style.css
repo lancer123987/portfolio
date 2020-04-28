@@ -54,6 +54,7 @@ a{
 	animation-duration:0s;
 	animation-delay:6s;
 	animation-fill-mode:forwards;
+	display: none;
 }
 @keyframes bgRemove{
     from{

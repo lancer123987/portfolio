@@ -7,6 +7,10 @@ var loading = function () {
 };
 
 $(document).ready(function () {
+	$("html, body").stop().animate({
+		scrollTop: 0
+	});
+
 	setTimeout(function () { loading(); }, 4000);
 
 	var Today = new Date();
