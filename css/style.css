@@ -25,6 +25,10 @@ a{
 	filter: blur(2px);
 }
 
+h2 span{
+	margin-left: 5px;
+}
+
 /***開廠動畫***/
 .load{
 	overflow: hidden;
@@ -204,6 +208,7 @@ main{
 
 #intro{
 	width: 30%;
+	margin-bottom: 100px;
 }
 
 .skill{
@@ -211,6 +216,7 @@ main{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	margin-bottom: 100px;
 }
 .skill h2{
 	width: 100%;
@@ -227,6 +233,12 @@ main{
 }
 .skill li{
 	padding-left: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+	#intro, .skill{
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 770px) {
@@ -259,7 +271,6 @@ main{
 }
 #exp{
 	width: 100%;
-	margin-top: 100px;
 	overflow: hidden;
 }
 #exp ol{
