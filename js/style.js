@@ -17,4 +17,14 @@ $(document).ready(function () {
 	var age = Today.getFullYear() - 1994;
 	$("#copyright").html("<p>Copyright &copy;" + Today.getFullYear() + " Lancer All Rights Reserved.</p>");
 	$("#age").html('年齡：' + age);
+
+	$('.workArea').slick({
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				dots: false,
+			}
+		]
+	});
 });
