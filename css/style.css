@@ -58,7 +58,7 @@ h2 span{
 	animation-duration:0s;
 	animation-delay:6s;
 	animation-fill-mode:forwards;
-	display: none;
+	/* display: none; */
 }
 @keyframes bgRemove{
     from{
@@ -235,20 +235,6 @@ main{
 	padding-left: 10px;
 }
 
-@media only screen and (max-width: 1024px) {
-	#intro, .skill{
-		width: 100%;
-	}
-}
-
-@media only screen and (max-width: 770px) {
-	header ul li{
-		width: 80px;
-	}
-	.skill > ol{
-		width: 45%;
-	}
-}
 .shadow{
 	box-shadow: 0px 0px 15px rgba(255,255,255,0.7);
 }
@@ -317,4 +303,44 @@ footer{
 	width: 100%;
 	font-size: 12px;
 	text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	#intro, .skill{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	header ul li{
+		width: 80px;
+	}
+	.skill > ol{
+		width: 45%;
+	}
+	#exp ol li{
+		flex-wrap: wrap;
+	}
+	#exp ol .line{
+		left: 5px;
+	}
+	#exp ol li span{
+		width: 100%;
+	}
+	#exp ol li span::after {
+    display: none;
+	}
+	#exp ol li span::before {
+    content: '●';
+    position: relative;
+    left: -2.5px;
+	}
+	#exp ol li div{
+		width: calc(100% - 30px);
+		padding-left: 30px;
+	}
+}
+
+@media only screen and (max-width: 499px) {
+
 }
