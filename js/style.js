@@ -22,7 +22,7 @@ $(document).ready(function () {
 		dots: true,
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 769,
 				dots: false,
 			}
 		]
