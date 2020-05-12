@@ -329,8 +329,8 @@ main{
 }
 .slick-dots li button{
 	display: block;
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 	border-radius: 50%;
 	border: none;
 	color: transparent;
@@ -345,6 +345,27 @@ main{
 	margin-top: 40px;
 }
 .workArea > div{
+}
+.workArea h4{
+	text-align: center;
+	font-size: 28px;
+	margin: 10px auto;
+}
+.workArea a{
+	width: 120px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+	border: 1px solid #FFF;
+	border-radius: 30px;
+	color: #FFF;
+	transition: all .2s ease-in-out;
+}
+.workArea a:hover{
+	color: #666;
+	background-color: rgba(255,255,255,0.7);
+	border: 1px solid rgba(255,255,255,0.7);
 }
 .workArea img{
 	width: 100%;
@@ -403,5 +424,10 @@ footer{
 }
 
 @media only screen and (max-width: 499px) {
-
+	.slick-arrow,.workArea img{
+		height: 350px;
+	}
+	.workArea h4{
+		font-size: 20px;
+	}
 }
